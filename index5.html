@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul,li,a,span,em,div,p,h2,h3{
+            margin: 0;
+            padding: 0;
+        }
+        em{font-style: normal;}
+        ul{list-style: none;}
+        a{
+            text-decoration: none;
+            color: #222;;
+        }
+        img{border: none;}
+        .card_wrap{
+            width: 250px;
+            height: 320px;
+            margin: 50px auto;
+        }
+        .card{
+            width: 250px;
+            height: 320px;
+            border-radius: 7px;
+            padding: 10px;
+            box-sizing: border-box;
+            color: #fff;
+            position: absolute;
+            backface-visibility: hidden;
+            transition: transform 0.5s linear 0s;
+        }
+        .card h3{
+            margin-bottom: 20px;
+        }
+        .back{
+            background-color: #07c;
+            transform: perspective(600px) rotateY(180deg);
+        }
+
+        .front{
+            background-color: #ffa500;
+            transform: perspective(600px) rotateY(0deg);
+        }
+
+        /* hover*/
+        .card_wrap:hover .back{
+            transform: perspective(600px) rotateY(0deg);
+        }
+        .card_wrap:hover .front{
+            transform: perspective(600px) rotateY(-180deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="card_wrap">
+        <div class="back card">
+            <h3>포스코ICT</h3>
+            <p>포스코ICT가 청년층을 대상으로 하는 맞춤형 인턴십 프로그램을 통해 IT 일자리를 창출하고 인재를 확보한다. 지난해부터 IT 전문교육 기관인 비트컴퓨터와 개설한 '청년 IT전문가 아카데미'를 올해 더욱 확대 운영할 계획이다.</p>
+        </div>
+        <div class="front card">
+            <h3>디지털기술 R&D</h3>
+            <p>정보방송통신대연합(ICT대연합)이 국내 ICT 업계를 대표해 20대 대통령 선거 후보에 디지털 R&D 확대와 디지털정책 거버넌스 강화 등의 디지털 혁신전챙 방향을 제안했다.</p>
+        </div>
+    </div>
+</body>
+</html>

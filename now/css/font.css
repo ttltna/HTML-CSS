@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+@font-face{
+    font-family: 'Nanum';
+    font-weight: 400;
+    src: url('../font/NanumGothic.eot');
+    src: url('../font/NanumGothic.eot?#iefix') foramt('embedded-opentype'),
+         url('../font/NanumGothic.woff') format('woff')
+         url('../font')
+}

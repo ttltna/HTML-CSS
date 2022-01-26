@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>get&set</title>
+    <style>
+        body,div,ul,li,a,img{margin: 0;padding: 0;}
+        body{
+            font-size: 12px;
+            color: #222;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        ul{
+            list-style: none;
+            overflow: hidden;
+        }
+        img{border: none;}
+        a{text-decoration: none;}
+        .wrap{
+            width: 500px;
+            margin: 50px auto;
+            border: 1px solid #d9d9d9;
+            padding: 5px;
+            background-color: rgb(55, 32, 139);
+        }
+        li{
+            float: left;
+            width: 70px;
+            height: 70px;
+            border: 1px solid #d9d9d9;
+            padding: 2px;
+            margin-right: 5px;
+        }
+        li img{
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+        }
+        h3{
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        .text{
+            text-align: center;
+            font-size: 14px;
+            margin-top: 10px;
+            color: #fff;
+        }
+        .gallery{
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        function showPic(whichPic){
+            let source = whichPic.getAttribute("href");
+            const photo = document.getElementById("photo");
+
+            photo.setAttribute("src",source);
+
+            let title = whichPic.getAttribute("title");
+            const text = document.getElementById("text");
+
+            // text.innerText = title; // way 1
+            text.firstChild.nodeValue = title; //way 2
+        }
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <h3>[인테리어 소품]</h3>
+        <ul>
+            <li>
+                <a href="./images/b1.png" title="세련된 감각 디자인 스퀘어의 인테리어" onclick="showPic(this);return false">
+                    <img src="./images/sbtn1.jpg" alt="">
+                </a>
+            </li>
+
+            <li>
+                <a href="./images/b2.png" title="인테리어에 좋은 장식 소품" onclick="showPic(this);return false">
+                    <img src="./images/sbtn2.jpg" alt="">
+                </a>
+            </li>
+
+            <li>
+                <a href="./images/b3.png" title="빈티지 감성 포스터 인테리어" onclick="showPic(this);return false">
+                    <img src="./images/sbtn3.jpg" alt="">
+                </a>
+            </li>
+
+            <li>
+                <a href="./images/b4.png" title="모던한 인테리어를 감각적으로 " onclick="showPic(this);return false">
+                    <img src="./images/sbtn4.jpg" alt="">
+                </a>
+            </li>
+
+            <li>
+                <a href="./images/b5.png" title="프리미엄 와이드 아트윌데코 인테리어" onclick="showPic(this);return false">
+                    <img src="./images/sbtn5.jpg" alt="">
+                </a>
+            </li>
+
+            <li>
+                <a href="./images/b6.png" title="가구소품인테리어 디자인" onclick="showPic(this);return false">
+                    <img src="./images/sbtn6.jpg" alt="">
+                </a>
+            </li>
+        </ul>
+        <div class="gallery">
+            <img src="./images/b1.png" alt="" id="photo"/>
+        </div>
+        <div id="text" class="text">
+            www.naver.com
+        </div>
+    </div>
+</body>
+</html>
